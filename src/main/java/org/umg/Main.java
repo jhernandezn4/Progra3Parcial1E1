@@ -1,19 +1,38 @@
 package org.umg;
 
+import org.umg.ejercicio1.formMostrar;
+import org.umg.ejercicio2.nodos.Producto;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
+
+
+
+
+
     public static void main(String[] args) {
-        // Press Alt+Intro with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Mayús+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        //formMostrar form = new formMostrar();
+        //form.setVisible(true);
 
-            // Press Mayús+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+
+        Producto lista = new Producto(1,"Coca");
+        lista.agregarProducto(new Producto(2,"Galletas"));
+        lista.agregarProducto(new Producto(3,"Jugo"));
+        lista.agregarProducto(new Producto(4,"Golosinas"));
+        lista.agregarProducto(new Producto(5,"Dulces"));
+
+        Producto mostrar = lista;
+        for (int i =0; i<5;i++){
+            System.out.println(mostrar.getNombre());
+            mostrar=mostrar.getSiguiente();
         }
+
+
+
+
     }
+
+
 }
